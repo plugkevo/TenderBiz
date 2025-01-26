@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
 
         val adapter=ViewPagerAdapter(supportFragmentManager)
 
-        adapter.addFragment(FirstFragment(),"First")
-        adapter.addFragment(SecondFragment(),"Second")
-        adapter.addFragment(ThirdFragment(),"Third")
+        adapter.addFragment(FirstFragment(),"All Tenders")
+        adapter.addFragment(SecondFragment(),"Active")
+        adapter.addFragment(ThirdFragment(),"My Tenders")
 
         binding.viewPager.adapter=adapter
         binding.tbLayout.setupWithViewPager(binding.viewPager)

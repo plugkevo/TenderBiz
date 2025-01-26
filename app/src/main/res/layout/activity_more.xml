@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#fbf3f3">
+    android:background="#f8e7e7">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearlayout"
@@ -24,6 +24,7 @@
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"
+            android:fontFamily="@font/gentium_basic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -71,11 +72,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="20dp"
             android:background="@drawable/border1"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -88,7 +89,7 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="133dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="25dp"
                 android:text="Wallet"
@@ -104,15 +105,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:paddingLeft="0dp"
                 android:text="View"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.741"
+                app:layout_constraintHorizontal_bias="0.725"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.538" />
@@ -129,7 +129,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/border1">
+            android:background="@drawable/border1"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/IVtenders"
@@ -161,7 +162,7 @@
                 android:paddingLeft="0dp"
                 android:text="View"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -182,7 +183,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/border1">
+            android:background="@drawable/border1"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/IVnotifications"
@@ -214,7 +216,7 @@
                 android:paddingLeft="0dp"
                 android:text="View"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textSize="20sp"
                 android:clickable="true"
                 android:textStyle="bold"
@@ -236,7 +238,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/border1">
+            android:background="@drawable/border1"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/privacy"
@@ -268,7 +271,7 @@
                 android:paddingLeft="0dp"
                 android:text="View"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -289,7 +292,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/border1">
+            android:background="@drawable/border1"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/support"
@@ -321,7 +325,7 @@
                 android:paddingLeft="0dp"
                 android:text="View"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
