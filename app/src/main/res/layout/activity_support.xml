@@ -8,6 +8,7 @@
     tools:context=".SupportActivity">
 
     <TextView
+        android:id="@+id/activityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/gentium_basic"
@@ -17,4 +18,107 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:text="Send us a message!!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="200dp"
+        app:boxStrokeColor="@color/yellow"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullnameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your Full Name"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:boxStrokeColor="@color/yellow"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fnLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your Email"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/telLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:boxStrokeColor="@color/yellow"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type Your telephone number"
+            android:inputType="text|phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:boxStrokeColor="@color/yellow"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/telLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/messageEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type you message"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderbtn"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

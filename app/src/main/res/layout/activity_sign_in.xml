@@ -8,17 +8,31 @@
     tools:context=".activity_sign_in">
 
 
+  <TextView
+      android:id="@+id/wcTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="88dp"
+      android:text="Welcome, &#10;Sign in to continue"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:textColor="@color/black"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.156"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
   <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/emailLayout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginHorizontal="16dp"
-      android:layout_marginTop="370dp"
+      android:layout_marginTop="320dp"
       app:boxStrokeColor="@color/yellow"
       app:hintTextColor="@color/primary"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/wcTxt"
       >
 
     <com.google.android.material.textfield.TextInputEditText
@@ -71,6 +85,7 @@
       android:layout_height="wrap_content"
       android:textColor="@color/black"
       android:text="Not Registered Yet , Sign Up !"
+      android:focusable="true"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"

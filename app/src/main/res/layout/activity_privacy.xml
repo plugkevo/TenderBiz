@@ -1,20 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PrivacyActivity">
+    android:background="#f8e7e7">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/gentium_basic"
-        android:text="Privacy policy"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".PrivacyActivity"
+        android:padding="5dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gentium_basic"
+            android:text="Privacy policy"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduction"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"/>
+
+        <TextView
+            android:id="@+id/introtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Tender Bid! This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application. Please read this policy carefully to understand our practices regarding your personal data and how we will treat it. By using Tender Bid, you agree to the practices described in this Privacy Policy."
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/intro"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/infoCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information we collect"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/introtxt"/>
+
+        <TextView
+            android:id="@+id/infopersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Personal information"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoCollect"/>
+
+        <TextView
+            android:id="@+id/personalinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We may collect the following types of personal information:&#10;Registration Information: Name, email address, phone number, company name, and other details required for account creation.&#10;Identity Verification: Government-issued identification, tax registration details, or business registration certificates.&#10;Payment Information: Bank account details or payment card information when necessary for financial transactions."
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infopersonal"/>
+
+        <TextView
+            android:id="@+id/tenders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Tender Details"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personalinfo"/>
+
+        <TextView
+            android:id="@+id/tenderinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Information related to tenders you create, bid on, or interact with, including documents uploaded and communications made."
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tenders"/>
+
+        <TextView
+            android:id="@+id/communications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Communications"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tenderinfo"/>
+
+        <TextView
+            android:id="@+id/commdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Records of communications between you and Tender Bid, including customer support inquiries."
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/communications"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
