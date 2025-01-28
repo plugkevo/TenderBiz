@@ -50,7 +50,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="56dp"
-        android:src="@drawable/baseline_account_circle_24"
+        android:src="@mipmap/tenderbidcircle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +58,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -71,11 +72,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/border1"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/border1"
+            android:orientation="horizontal"
             android:padding="10dp">
 
             <ImageView
@@ -124,13 +125,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/border1"
-            android:padding="10dp">
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingLeft="20dp">
 
             <ImageView
                 android:id="@+id/IVtenders"
@@ -178,13 +179,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/border1"
-            android:padding="10dp">
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingLeft="20dp">
 
             <ImageView
                 android:id="@+id/IVnotifications"
@@ -213,12 +214,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:clickable="true"
                 android:paddingLeft="0dp"
                 android:text="View"
                 android:textAlignment="viewEnd"
                 android:textColor="@color/teal_700"
                 android:textSize="20sp"
-                android:clickable="true"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -233,13 +234,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/border1"
-            android:padding="10dp">
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingLeft="20dp">
 
             <ImageView
                 android:id="@+id/privacy"
@@ -287,13 +288,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/border1"
-            android:padding="10dp">
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingLeft="20dp">
 
             <ImageView
                 android:id="@+id/support"
@@ -339,9 +340,20 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logoutbtn"
+        android:text="LogOut"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
