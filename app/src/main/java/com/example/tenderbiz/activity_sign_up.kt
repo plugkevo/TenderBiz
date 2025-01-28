@@ -43,7 +43,7 @@ class activity_sign_up : AppCompatActivity() {
                             val intent = Intent(this, activity_sign_in::class.java)
                             startActivity(intent)
                         } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Password should be at least 6 characters", Toast.LENGTH_SHORT).show()
                         }
                     }
                 } else {
