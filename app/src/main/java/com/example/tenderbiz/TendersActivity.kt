@@ -11,7 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class TendersActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTendersBinding
-    private lateinit var adapter: TendersAdapter
+    private lateinit var adapter: UpdateTendersAdapter
     private val tenderList = mutableListOf<Tender>()
     private val db = FirebaseFirestore.getInstance()
 
@@ -22,7 +22,7 @@ class TendersActivity : AppCompatActivity() {
 
         // Initialize RecyclerView
         binding.rvTenders.layoutManager = LinearLayoutManager(this)
-        adapter = TendersAdapter(tenderList)
+        adapter = UpdateTendersAdapter(tenderList)
         binding.rvTenders.adapter = adapter
 
         // Fetch tenders from Firestore
@@ -41,7 +41,7 @@ class TendersActivity : AppCompatActivity() {
             .addOnSuccessListener { result ->
                 tenderList.clear()
                 for (document in result) {
-                    val tender = document.toObject(Tender::class.java)
+                    val tender = document.toObject(Tender::class.java).copy(id = document.id)
                     tenderList.add(tender)
                 }
                 adapter.notifyDataSetChanged()

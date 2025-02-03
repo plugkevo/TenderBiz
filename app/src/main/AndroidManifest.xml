@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TenderBiz"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateTenderDetails"
+            android:exported="false" />
+        <activity
             android:name=".TenderDetailsActivity"
             android:exported="false" />
         <activity

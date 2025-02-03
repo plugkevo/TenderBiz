@@ -1,26 +1,55 @@
 package com.example.tenderbiz
 
+import android.app.DatePickerDialog
 import android.os.Bundle
-import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tenderbiz.databinding.ActivityAddTendersBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
+import java.util.*
 
 class addTenders : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddTendersBinding
     private val db = FirebaseFirestore.getInstance() // Initialize Firestore
+    private val calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddTendersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Handle date pickers
+        binding.openingDateInput.setOnClickListener {
+            showDatePicker { date -> binding.openingDateInput.setText(date) }
+        }
+
+        binding.closingDateInput.setOnClickListener {
+            showDatePicker { date -> binding.closingDateInput.setText(date) }
+        }
+
         // Handle submit button click
         binding.submitButton.setOnClickListener {
             submitTender()
         }
+    }
+
+    private fun showDatePicker(onDateSelected: (String) -> Unit) {
+        val datePicker = DatePickerDialog(
+            this,
+            { _, year, month, dayOfMonth ->
+                val selectedDate = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+                    .format(Calendar.getInstance().apply {
+                        set(year, month, dayOfMonth)
+                    }.time)
+                onDateSelected(selectedDate)
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        datePicker.show()
     }
 
     private fun submitTender() {
